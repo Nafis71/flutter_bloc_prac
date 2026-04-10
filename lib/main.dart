@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_prac/core/routes/app_routes.dart';
+import 'package:flutter_bloc_prac/core/utils/image_picker_utils.dart';
 import 'package:flutter_bloc_prac/features/counter/bloc/counter_bloc.dart';
 import 'package:flutter_bloc_prac/features/dynamic_container/bloc/dynamic_container_bloc.dart';
+import 'package:flutter_bloc_prac/features/gallery/bloc/gallery_picker_bloc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,16 +20,15 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => CounterBloc()),
         BlocProvider(create: (context) => DynamicContainerBloc()),
+        BlocProvider(
+          create: (context) => GalleryPickerBloc(ImagePickerUtils()),
+        ),
       ],
       child: MaterialApp.router(
         title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: .fromSeed(seedColor: Colors.deepPurple),
-        ),
+        theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
         routerConfig: AppRoutes.router,
       ),
     );
   }
 }
-
-
