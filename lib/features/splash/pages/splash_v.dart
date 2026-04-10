@@ -17,7 +17,7 @@ class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     _timer = Timer(Duration(seconds: 2), (){
-      context.goNamed(RouteNames.counter);
+      context.goNamed(RouteNames.dynamicContainer);
       _timer.cancel();
     });
     super.initState();

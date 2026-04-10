@@ -1,5 +1,6 @@
 import 'package:flutter_bloc_prac/core/routes/route_names.dart';
 import 'package:flutter_bloc_prac/features/counter/pages/counter_v.dart';
+import 'package:flutter_bloc_prac/features/dynamic_container/pages/dynamic_container_v.dart';
 import 'package:flutter_bloc_prac/features/splash/pages/splash_v.dart';
 import 'package:go_router/go_router.dart';
 
@@ -18,6 +19,13 @@ class AppRoutes {
         name: RouteNames.counter,
         builder: (context, state) {
           return CounterView();
+        },
+      ),
+      GoRoute(
+        path: "/dynamic-container",
+        name: RouteNames.dynamicContainer,
+        builder: (context, state) {
+          return DynamicContainerView();
         },
       ),
     ],
