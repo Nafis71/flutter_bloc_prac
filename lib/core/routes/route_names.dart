@@ -3,4 +3,5 @@ class RouteNames {
   static const String counter = "counter";
   static const String dynamicContainer = "dynamic-container";
   static const String gallery = "gallery";
+  static const String post = "post";
 }
