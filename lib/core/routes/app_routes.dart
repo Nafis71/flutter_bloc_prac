@@ -5,6 +5,8 @@ import 'package:flutter_bloc_prac/features/gallery/pages/gallery_v.dart';
 import 'package:flutter_bloc_prac/features/splash/pages/splash_v.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/social/presentation/pages/post_view.dart';
+
 class AppRoutes {
   static GoRouter router = GoRouter(
     initialLocation: RouteNames.initial,
@@ -35,6 +37,13 @@ class AppRoutes {
         name: RouteNames.gallery,
         builder: (context, state) {
           return GalleryView();
+        },
+      ),
+      GoRoute(
+        path: "/post",
+        name: RouteNames.post,
+        builder: (context, state) {
+          return PostView();
         },
       ),
     ],
