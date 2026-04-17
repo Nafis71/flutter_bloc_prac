@@ -38,6 +38,8 @@ dependencies:
   go_router: ^17.2.0
   equatable: ^2.0.8
   image_picker:
+  dio: ^5.9.2
+  logger: ^2.7.0
 
 dev_dependencies:
   flutter_test:

@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc_prac/core/utils/image_picker_utils.dart';
+import 'package:flutter_bloc_prac/core/utils/image_picker/image_picker_utils.dart';
 import 'package:flutter_bloc_prac/features/gallery/bloc/gallery_picker_event.dart';
 import 'package:flutter_bloc_prac/features/gallery/bloc/gallery_picker_state.dart';
 import 'package:image_picker/image_picker.dart';

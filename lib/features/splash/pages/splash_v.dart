@@ -17,7 +17,7 @@ class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     _timer = Timer(Duration(seconds: 2), (){
-      context.goNamed(RouteNames.gallery);
+      context.goNamed(RouteNames.post);
       _timer.cancel();
     });
     super.initState();
